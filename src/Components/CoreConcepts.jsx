@@ -1,15 +1,14 @@
 import CoreConcept from "./CoreConcept"
-import { CORE_CONCEPTS  } from "../data"
+import { CORE_CONCEPTS } from "../data"
+import Section from "./Section"
 
-export default function CoreConcepts()
-{
+export default function CoreConcepts() {
     return (
-        <section id="core-concepts">
-        <h2 >Core Concepts</h2>
-        <ul>
-          {/* Passing object into component as props */}
-          {CORE_CONCEPTS.map(item => <CoreConcept key={item.title} {...item}/>)}
-        </ul>
-        </section>
+        <Section title="Core Concepts" id="core-concepts">
+            <ul>
+                {/* Passing object into component as props */}
+                {CORE_CONCEPTS.map(item => <CoreConcept key={item.title} {...item} />)}
+            </ul>
+        </Section>
     )
 }
